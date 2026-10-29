@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-dark: #14513A;
+    --primary-hover: #0E3B2A;
+    --accent-green: #1E9E5A;
+    --navy-heading: #14233F;
+    --body-text: #4B5563;
+    --muted-grey: #8A94A0;
+    --accent-amber: #F5B335;
+    --error-red: #D64545;
+    --info-blue: #2F6FDB;
+  }
+
+  body {
+    background-color: #F4F8F6;
+    color: #4B5563;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4F8F6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D1DCD6;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A8C2B6;
+}
+
+/* Print Specific Rules */
+@media print {
+  body {
+    background: #FFFFFF !important;
+  }
+
+  header, footer, aside, nav, button, .print\\:hidden {
+    display: none !important;
+  }
+
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+}
+
